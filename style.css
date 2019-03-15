@@ -264,105 +264,26 @@ header.masthead .intro-text .intro-heading {
 }
 
 /* CONTENU TROMBI */
-
-.trombi_carte {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
+.trombi-page {
+	display:flex;
+	justify-content: space-around;
 }
 
-.trombi_ligne {
-	margin-bottom: 20px;
-}
-
-.trombi_onglet {
-	justify-content: center;
-	font-size: 30px;
-	margin-top: 150px;
-}
-
-.photoElne { 
-  height: 20em;
-  background-image: url("image/elneris.jpg");
-  background-size: cover;
- }
-
-.img-php {
-	height: 20em;
-	width: 100%;
-}
-
-.photoJulie { 
-	height: 20em;
-	background-image: url("image/julie.jpg");
-	background-size: cover;
-}
-
-.photoNico { 
-	height: 20em;
-	background-image: url("image/nico.jpg");
-	background-size: cover;
- }
-
-.photoMartin {
-	height: 20em;
-	background-image: url("image/martin2.jpg");
-	background-size: cover;
-}
-
-@media (min-width: 992px) {
-	.photoElne:hover {
-	  background-image: url("image/elneris3.jpg");
+.photo1 {
+	width : 100%;
 	}
 
-	.photoMartin:hover {
-  	background-image: url("image/martin.jpg");
-	}
-
-  	.photoJulie:hover {
-    background-image: url("image/julie2.jpg");
-  	}
-
-  	.photoNico:hover {
-    background-image: url("image/nico2.jpg");
-  	}
+.photo2 {
+	width : 100%;
+	display : none;
 }
 
-.nav-pills .nav-link.active {
-	color: #fff !important;
-	background-color: orange;
+.trombi_carte:hover .photo1{
+	width : 100%;
+	display : none;
 }
 
-.nav-pills .nav-link {
-	border:2px solid black;
-	border-radius: 5px;
-	background-color: #F0F0F0;
-	margin-left: 24px;
-}
-
-.trombi_nom {
-	text-align: center;
-	height: 100%;
-	color: black;
-}
-
-.contact_card_text {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.contact_map {
-	border: 2px solid #888;
-	border-style: double;
-	border-width: 5px;
-	padding: 0;
-}
-
-.contact_form {
-	margin-bottom: 0;
-}
-
-.contact_button {
-	position: absolute;
-	left: 41%;
+.trombi_carte:hover .photo2 {
+	width : 100%;
+	display:block;
 }
