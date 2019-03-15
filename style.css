@@ -264,9 +264,9 @@ header.masthead .intro-text .intro-heading {
 }
 
 /* CONTENU TROMBI */
-.trombi-page {
-	display:flex;
-	justify-content: space-around;
+
+.trombi_carte {
+ margin-bottom: 10px;
 }
 
 .photo1 {

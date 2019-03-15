@@ -1,3 +1,5 @@
+// objet students
+
 const students = [{
     nom: 'CHARLEMAGNE',
     prenom: 'Julie',
@@ -38,12 +40,50 @@ const students = [{
     },{
     nom: 'HOSTEINS',
     prenom: 'Nicolas',
-    langage: 'JS'
+    langage: 'JS',
     age : '29 ans',
     Email: 'n.hosteins@gmail.com',
     image1 : 'nico.jpg',
-    image2 : 'nicolas.jpg',
+    image2 : 'nico2.jpg',
     présentation:`Après un diplome d'environnement en 2002, j'ai travaillé un an dans ce domaine. Pendant la période de chomage suivante, je me suis inscrit en bénévole dans une salle de concert. J'ai travaillé ainsi 15 ans dans ce domaine des musiques amplifiées, sans le chercher vraiment, mais avec passion.
     Aujourd'hui, la passion s'étant érodée, je me reconverti dans le développement web, métier plus traditionnel mais certainement tout aussi interessant. `
     }
 ]
+
+
+
+const trombiCartes = function(listStudents) {
+    // recuperer les classes bloc et cartes
+    const template = document.getElementsByClassName('trombi_carte')[0];
+    const container = document.getElementsByClassName('trombi_page')[0];
+    
+    // vider le container
+    container.innerHTML = '';
+
+    for (let i = 0; i<listStudents.length; i +=1){
+        const student = listStudents[i];
+        const elementStudent = template.cloneNode(true);
+
+        // recupere les images
+        const elementImage1 = elementStudent.getElementsByClassName('photo1')[0];
+        elementImage1.src = student.image1;
+
+        const elementImage2 = elementStudent.getElementsByClassName('photo2')[0];
+        elementImage2.src = student.image2;
+
+        const elementFirstname = elementStudent.getElementsByClassName('nom')[0];
+        elementFirstname.innerHTML = student.nom;
+
+        const elementlastname = elementStudent.getElementsByClassName('prenom')[0];
+        elementlastname.innerHTML = student.prenom;
+
+        container.appendChild(elementStudent);
+
+       
+    }
+
+
+
+}
+
+trombiCartes(students)
